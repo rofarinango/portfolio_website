@@ -4,11 +4,6 @@ from django.shortcuts import render
 def home(request):
     """The home page for personal website."""
     return render(request, 'pages/home.html')
-
-def about(request):
-    """The about page for personal website."""
-    return render(request, 'pages/about.html')
-
 def services(request):
     """The services page for personal website."""
     return render(request, 'pages/services.html')
@@ -17,9 +12,9 @@ def skills(request):
     """The skills page for personal website."""
     return render(request, 'pages/skills.html')
 
-def teams(request):
+def projects(request):
     """The teams page for personal website."""
-    return render(request, 'pages/teams.html')
+    return render(request, 'pages/projects.html')
 
 def contact(request):
     """Tje contact page for personal website."""

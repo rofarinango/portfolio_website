@@ -1,5 +1,7 @@
 {% extends "pages/base.html" %}
+{% load static %}
 {% block home %}
+<!-- Home Section -->
 <section class="home" id="home">
     <div class="max-width">
         <div class="home-content">
@@ -7,6 +9,22 @@
             <div class="text-2">Rodrigo Farinango</div>
             <div class="text-3">And I'm <span class="typing"></span></div>
             <a href="#">Hire me</a>
+        </div>
+    </div>
+</section>
+<!-- About Section Start -->
+<section class="about" id="about">
+    <div class="max-width">
+        <h2 class="title">About me</h2>
+        <div class="about-content">
+            <div class="column left">
+                <img src="{% static 'pages/images/profile-1.jpeg' %}" alt="">
+            </div>
+            <div class="column right">
+                <div class="text">I'm Rodrigo and I'm <span class="typing-2"></span></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga praesentium ratione deleniti, impedit totam accusantium ipsam officia libero odio consequuntur. Fugiat, asperiores voluptatem earum rerum possimus natus? Dignissimos sed tenetur quasi voluptas animi expedita placeat beatae nobis praesentium commodi rem necessitatibus, ullam error officiis explicabo saepe repellat quae dolor ducimus sint iure cumque quia libero! Eveniet eaque esse dolore assumenda?</p>
+                <a href="#">Download CV</a>
+            </div>
         </div>
     </div>
 </section>
