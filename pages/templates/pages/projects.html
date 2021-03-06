@@ -5,43 +5,11 @@
 <section class="teams" id="teams">
     <div class="max-width">
         <h2 class="title">Projects</h2>
-        <div class="carousel owl-carousel">
-            <div class="card">
-                <div class="box">
-                    <img src="{% static 'pages/images/profile-1.jpeg' %}" alt="">
-                    <div class="text">Someone name</div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="box">
-                    <img src="{% static 'pages/images/profile-1.jpeg' %}" alt="">
-                    <div class="text">Someone name</div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="box">
-                    <img src="{% static 'pages/images/profile-1.jpeg' %}" alt="">
-                    <div class="text">Someone name</div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="box">
-                    <img src="{% static 'pages/images/profile-1.jpeg' %}" alt="">
-                    <div class="text">Someone name</div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="box">
-                    <img src="{% static 'pages/images/profile-1.jpeg' %}" alt="">
-                    <div class="text">Someone name</div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
+        {% for project in projects %}
+			<li><a href="">{{ project.title }}</a></li>
+		{% empty %}
+			<li>No topics have been added yet.</li>
+		{% endfor %}
     </div>
 </section>
 {% endblock projects %}
