@@ -17,7 +17,7 @@ def skills(request):
 
 def projects(request):
     """The projects page for personal website."""
-    g = Github("CHANGE_token")
+    g = Github("90ba7886e92a721681180a2cefc8929df131af7f")
     for repo in g.get_user().get_repos():
         print(repo.description)
     return render(request, 'pages/projects.html')
