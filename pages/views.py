@@ -18,25 +18,27 @@ def skills(request):
 
 def projects(request):
     """The projects page for personal website."""
-    g = Github("changeToken")
+    g = Github("0446aaf0917511ae12e6ef3d03a7f2563475031f")
     pj = {'Title': [],
           'Description': [],
           'Language': [],
           'Createdat': [],
           'Size': [],
-          'Stars': []
+          'Stars': [],
+          'Url': []
           }
     
     allProjects=[]
     for repo in g.get_user().get_repos():
-        project = Project(repo.name, repo.description, repo.language, repo.created_at, repo.size, repo.stargazers_count)
+        project = Project(repo.name, repo.description, repo.language, repo.created_at, repo.size, repo.stargazers_count, repo.html_url)
         pj['Title'].append(project.title)
         pj['Description'].append(project.description)
         pj['Language'].append(project.language)
         pj['Createdat'].append(project.date_created)
         pj['Size'].append(project.size)
         pj['Stars'].append(project.stars)
-    df = pd.DataFrame(pj, columns= ['Title', 'Description', 'Language', 'Createdat', 'Size', 'Stars'])
+        pj['Url'].append(project.url)
+    df = pd.DataFrame(pj, columns= ['Title', 'Description', 'Language', 'Createdat', 'Size', 'Stars', 'Url'])
     print(df)
     for i in range(df.shape[0]):
         temp = df.loc[i]

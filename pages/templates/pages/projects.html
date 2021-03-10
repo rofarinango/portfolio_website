@@ -6,7 +6,6 @@
 <section class="teams" id="teams">
     <div class="max-width">
         <h2 class="title">Projects</h2>
-        <div style="overflow-x:auto;">
             <table class="table">
                 <thead>
                     <th>Title</th>
@@ -19,8 +18,12 @@
                 <tbody>
                     {% for project in allProjects %}
                     <tr>
-                        <td>{{project.Title}}</td>
-                        <td>{{project.Description}}</td>
+                        <td><a class="no-color"href="{{project.Url}}">{{project.Title}}</a></td>
+                        <td style="max-width: 307px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: block;"><div>{{project.Description}}</td>
                         <td>{{project.Language}}</td>
                         <td>{{project.Createdat}}</td>
                         <td>{{project.Size}}</td>
@@ -29,7 +32,6 @@
                     {% endfor %}
                 </tbody>
             </table>
-        </div>
     </div>
 </section>
 
