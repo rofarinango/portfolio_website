@@ -18,7 +18,7 @@ def skills(request):
 
 def projects(request):
     """The projects page for personal website."""
-    g = Github("0446aaf0917511ae12e6ef3d03a7f2563475031f")
+    g = Github("changeToken")
     pj = {'Title': [],
           'Description': [],
           'Language': [],
