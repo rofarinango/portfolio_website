@@ -413,6 +413,20 @@ section .title::after{
 .teams .carousel .card:hover img{
 	border-color: #fff;
 }
+.table{
+	width: 100%;
+	border-collapse: collapse;
+}
+.table td, .table th{
+	padding: 12px 15px;
+	border: 1px solid #ddd;
+	text-align: center;
+	font-size: 16px;
+}
+.table th{
+	background-color:#4367AA;
+	
+}
 .owl-dots{
 	text-align: center;
 	margin-top: 20px;
