@@ -234,6 +234,7 @@ section .title::after{
 	font-weight: 500;
 	padding: 10px 30px;
 	margin-top: 20px;
+	margin-left: 35%;
 	border-radius: 6px;
 	border: 2px solid #4367AA;
 	transition: all 0.3s ease;
@@ -432,6 +433,10 @@ section .title::after{
 }
 .no-color:hover{
 	text-decoration: underline;
+}
+
+.linkedin{
+	font-size: 47px;
 }
 
 .owl-dots{
