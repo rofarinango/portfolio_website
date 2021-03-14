@@ -2,6 +2,8 @@ from django.views.generic import View
 from django.shortcuts import render
 from github import Github
 from .projects import Project
+from .models import Contact
+from django.http import HttpResponse
 import pandas as pd
 
 
@@ -47,5 +49,17 @@ def projects(request):
     return render(request, 'pages/projects.html', context)
 
 def contact(request):
-    """Tje contact page for personal website."""
+    """The contact page for personal website."""
+    if request.method=="POST":
+        contact=Contact()
+        name=request.POST.get('name')
+        email=request.POST.get('email')
+        subject=request.POST.get('subject')
+        message=request.POST.get('message')
+        contact.name = name
+        contact.email=email
+        contact.subject=subject
+        contact.message=message
+        contact.save()
+        return render(request, 'pages/confirmation-message.html')
     return render(request, 'pages/contact.html')

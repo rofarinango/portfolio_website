@@ -551,6 +551,11 @@ section .title::after{
 	color: #4367AA;
 	background: none;
 }
+.contact .right .message-sent{
+	font-size: 20px;
+	font-weight: 600;
+	padding-left: 40%;
+}
 
 /* Footer Styling Section */
 footer{
